@@ -8,6 +8,7 @@ import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
+
         LinkedHashMap<Long, Integer> userDetails = new LinkedHashMap<>();
 
 
@@ -97,10 +98,39 @@ public class Main {
 public static Long generateCardNumber(){
     Random random = new Random();
     String BIN = "400000";
+    int[] Array = new int[15];
+    Array[0] = 4;
+    Array[1] = 0;
+    Array[2] = 0;
+    Array[3] = 0;
+    Array[4] = 0;
+    Array[5] = 0;
+    int temp;
 
-    for(int i = 0; i < 10; i++){
-        BIN = BIN + random.nextInt(9);
+    for(int i = 0; i < 9; i++){
+        temp = random.nextInt(9);
+        BIN = BIN + temp;
+        Array[i + 6] = temp;
     }
+    //Luhn Algorithm in action
+    //multily odd digits by 2;
+    for(int i = 0;i<15;i++){
+        if(i%2==0){
+            Array[i] = Array[i]*2;
+        }if(Array[i]>9){
+            Array[i] = Array[i]-9;
+        }
+    }
+    //sum of all elements
+    int sum = 0;
+    for(int num:Array){
+        sum = sum + num;
+    }
+    int x = sum%10;
+    int checksum = 10 - x;
+    BIN = BIN + checksum;
+
+
     long cardNumber = Long.parseLong(BIN);
 
        return cardNumber;
