@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/Problems/Cinema/Problems-Cinema.iml" filepath="$PROJECT_DIR$/.idea/modules/Problems/Cinema/Problems-Cinema.iml" group="Simple_Banking_System/Problems-Cinema" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/Problems/Cinema/Problems-Cinema_main.iml" filepath="$PROJECT_DIR$/.idea/modules/Problems/Cinema/Problems-Cinema_main.iml" group="Simple_Banking_System/Problems-Cinema" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/Problems/Cinema/Problems-Cinema_test.iml" filepath="$PROJECT_DIR$/.idea/modules/Problems/Cinema/Problems-Cinema_test.iml" group="Simple_Banking_System/Problems-Cinema" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/Problems/Maximum element in a matrix/Problems-Maximum_element_in_a_matrix.iml" filepath="$PROJECT_DIR$/.idea/modules/Problems/Maximum element in a matrix/Problems-Maximum_element_in_a_matrix.iml" group="Simple_Banking_System/Problems-Maximum_element_in_a_matrix" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/Problems/Maximum element in a matrix/Problems-Maximum_element_in_a_matrix_main.iml" filepath="$PROJECT_DIR$/.idea/modules/Problems/Maximum element in a matrix/Problems-Maximum_element_in_a_matrix_main.iml" group="Simple_Banking_System/Problems-Maximum_element_in_a_matrix" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/Problems/Maximum element in a matrix/Problems-Maximum_element_in_a_matrix_test.iml" filepath="$PROJECT_DIR$/.idea/modules/Problems/Maximum element in a matrix/Problems-Maximum_element_in_a_matrix_test.iml" group="Simple_Banking_System/Problems-Maximum_element_in_a_matrix" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/Problems/Rotate a rectange array/Problems-Rotate_a_rectange_array.iml" filepath="$PROJECT_DIR$/.idea/modules/Problems/Rotate a rectange array/Problems-Rotate_a_rectange_array.iml" group="Simple_Banking_System/Problems-Rotate_a_rectange_array" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/Problems/Rotate a rectange array/Problems-Rotate_a_rectange_array_main.iml" filepath="$PROJECT_DIR$/.idea/modules/Problems/Rotate a rectange array/Problems-Rotate_a_rectange_array_main.iml" group="Simple_Banking_System/Problems-Rotate_a_rectange_array" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/Problems/Rotate a rectange array/Problems-Rotate_a_rectange_array_test.iml" filepath="$PROJECT_DIR$/.idea/modules/Problems/Rotate a rectange array/Problems-Rotate_a_rectange_array_test.iml" group="Simple_Banking_System/Problems-Rotate_a_rectange_array" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/Simple_Banking_System.iml" filepath="$PROJECT_DIR$/.idea/modules/Simple_Banking_System.iml" group="Simple_Banking_System" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/Simple Banking System/task/Simple_Banking_System-task.iml" filepath="$PROJECT_DIR$/.idea/modules/Simple Banking System/task/Simple_Banking_System-task.iml" group="Simple_Banking_System/Simple_Banking_System-task" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/Simple Banking System/task/Simple_Banking_System-task_main.iml" filepath="$PROJECT_DIR$/.idea/modules/Simple Banking System/task/Simple_Banking_System-task_main.iml" group="Simple_Banking_System/Simple_Banking_System-task" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/Simple Banking System/task/Simple_Banking_System-task_test.iml" filepath="$PROJECT_DIR$/.idea/modules/Simple Banking System/task/Simple_Banking_System-task_test.iml" group="Simple_Banking_System/Simple_Banking_System-task" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/util/util.iml" filepath="$PROJECT_DIR$/.idea/modules/util/util.iml" group="Simple_Banking_System/util" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/util/util_main.iml" filepath="$PROJECT_DIR$/.idea/modules/util/util_main.iml" group="Simple_Banking_System/util" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/util/util_test.iml" filepath="$PROJECT_DIR$/.idea/modules/util/util_test.iml" group="Simple_Banking_System/util" />
+    </modules>
+  </component>
+</project>

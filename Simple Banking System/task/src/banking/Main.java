@@ -1,22 +1,75 @@
 package banking;
+import org.sqlite.SQLiteDataSource;
 
+import java.sql.*;
 import java.util.LinkedHashMap;
 import java.util.Map;
 import java.util.Random;
 import java.util.Scanner;
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.SQLException;
+import java.sql.Statement;
 
 public class Main {
     public static void main(String[] args) {
+        boolean hasData = false;
+        String createTable = "CREATE TABLE IF not EXISTS card (" +
+                "id INTEGER PRIMARY KEY AUTOINCREMENT," +
+                "number TEXT," +
+                "pin TEXT," +
+                "balance INTEGER DEFAULT 0"+
+
+        ");";
+
+        //create New database
+        String url =  "jdbc:sqlite:" + args[1];
+
+        try (Connection conn = DriverManager.getConnection(url)) {
+            if (conn != null) {
+                DatabaseMetaData meta = conn.getMetaData();
+                //System.out.println("The driver name is " + meta.getDriverName());
+                //System.out.println("A new database has been created.");
+            }
+
+        } catch (SQLException e) {
+            System.out.println(e.getMessage());
+        }
+
+        //connect to database
+        //create new table
+
+        SQLiteDataSource dataSource = new SQLiteDataSource();
+        dataSource.setUrl(url);
+
+        try (Connection con = dataSource.getConnection()) {
+            if (con.isValid(5)) {
+                //System.out.println("Connection is valid.");
+                Statement createtable = con.createStatement();
+                createtable.execute(createTable);
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+
+
+
+
+
+
+
+
+
+
+
         Scanner scanner = new Scanner(System.in);
-
         LinkedHashMap<Long, Integer> userDetails = new LinkedHashMap<>();
-
-
         LinkedHashMap<Long, Integer> userBalance = new LinkedHashMap<>();
         boolean exitflag = true;
 
         //switch statement
         while (exitflag) {
+            String insertIntoTable = "INSERT INTO card (number, pin) VALUES (";
             System.out.println("1. Create an account");
             System.out.println("2. Log into account");
             System.out.println("0. Exit");
@@ -29,6 +82,22 @@ public class Main {
                     int cardPin = generateCardPin();
                     userDetails.put(cardNumber, cardPin);
                     userBalance.put(cardNumber, 0);
+                    //adding to database
+                    insertIntoTable = insertIntoTable + cardNumber + "," + cardPin + ");";
+                    try (Connection con = dataSource.getConnection()) {
+                        if (con.isValid(5)) {
+                            //System.out.println("Connection is valid.");
+                            Statement insert = con.createStatement();
+                            insert.execute(insertIntoTable);
+                        }
+                    } catch (SQLException e) {
+                        e.printStackTrace();
+                    }
+
+
+
+
+
                     System.out.println("Your card has been created");
                     System.out.println("Your card number:");
                     System.out.println(cardNumber);
@@ -150,5 +219,21 @@ public static Long generateCardNumber(){
         return cardPin;
     }
 
+
+    public static void createNewDatabase(String fileName) {
+
+        String url = "jdbc:sqlite:C:/sqlite/db/" + fileName;
+
+        try (Connection conn = DriverManager.getConnection(url)) {
+            if (conn != null) {
+                DatabaseMetaData meta = conn.getMetaData();
+                //System.out.println("The driver name is " + meta.getDriverName());
+                //System.out.println("A new database has been created.");
+            }
+
+        } catch (SQLException e) {
+            System.out.println(e.getMessage());
+        }
+    }
 }
 
